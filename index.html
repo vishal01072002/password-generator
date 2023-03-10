@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>password generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <h1>PASSWORD GENERATOR</h1>
+
+        <div class="password-box">
+          <input
+            type="text"
+            placeholder="PASSWORD"
+            data-password-display
+            class="display"
+          />
+
+          <button data-copy class="copy-btn">
+            <span copy-msg class="tooltip"> copied </span>
+            <img src="copy.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="input-container">
+          <div class="content">
+            <div class="password-len">
+              <h2>Password Length</h2>
+              <h2 data-length-num>0</h2>
+            </div>
+          </div>
+
+          <div class="range">
+            <!-- its a custom attribute -->
+            <input
+              type="range"
+              min="1"
+              max="20"
+              step="1"
+              data-length
+              onclick="sliderHandle"
+              class="slider"
+            />
+          </div>
+
+          <div class="check-boxes">
+            <input type="checkbox" id="uppercase" />
+            <label for="uppercase">Includes Uppercase Letters</label>
+          </div>
+          <div class="check-boxes">
+            <input type="checkbox" id="lowercase" />
+            <label for="lowercase">Includes Lowercase Letters</label>
+          </div>
+          <div class="check-boxes">
+            <input type="checkbox" id="numbers" />
+            <label for="numbers">Includes Numbers</label>
+          </div>
+          <div class="check-boxes">
+            <input type="checkbox" id="symbols" />
+            <label for="symbols">Includes Symbols</label>
+          </div>
+
+          <div class="strength">
+            <h2>Strength</h2>
+            <div class="circle"></div>
+          </div>
+
+          <div class="btn-div">
+            <button class="generate-btn">GENERATE PASSWORD</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
